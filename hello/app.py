@@ -9,14 +9,20 @@ import os
 import click
 from flask import Flask
 
+from tests import main
+from format import format
+
 app = Flask(__name__)
 
 
 # the minimal Flask application
 @app.route('/')
 def index():
-    os.mkdir("123")
-    return '<h1>Hello, World!</h1>'
+    test = main()
+    template = format(test)
+    return f'<div>{template}</div>'
+    # print(test)
+    # return f'<div>{test}</div>'
 
 
 # bind multiple URL for one view function
