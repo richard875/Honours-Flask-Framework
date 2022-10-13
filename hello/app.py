@@ -18,8 +18,8 @@ app = Flask(__name__)
 # the minimal Flask application
 @app.route('/')
 def index():
-    test = main()
-    template = format(test)
+    test, total_time = main()
+    template = format(test, total_time)
     return f'<div>{template}</div>'
     # print(test)
     # return f'<div>{test}</div>'
