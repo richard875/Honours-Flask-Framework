@@ -23,76 +23,73 @@ from functions.strand_sort import strand_sort_test
 
 
 def main():
-    times = [10, 100, 1000]
-    max_number = [10, 100, 1000]
     tests = {}
+    print('----------------------------------------')
 
-    for i in range(len(times)):
-        time_variable = []
-        print('                                        ')
-        print('Test with {} times and max number {}'.format(times[i], max_number[i]))
-        print('----------------------------------------')
+    start = time.time()
+    bitonic_sort = bitonic_sort_test()
+    brick_sort = brick_sort_test()
+    bubble_sort = bubble_sort_test()
+    bucket_sort = bucket_sort_test()
+    cocktail_sort = cocktail_sort_test()
+    comb_sort = comb_sort_test()
+    gnome_sort = gnome_sort_test()
+    heap_sort = heap_sort_test()
+    insertion_sort = insertion_sort_test()
+    merge_sort = merge_sort_test()
+    pancake_sort = pancake_sort_test()
+    pigeonhole_sort = pigeonhole_sort_test()
+    quick_sort = quick_sort_test()
+    radix_sort = radix_sort_test()
+    selection_sort = selection_sort_test()
+    shell_sort = shell_sort_test()
+    smooth_sort = smooth_sort_test()
+    strand_sort = strand_sort_test()
+    end = time.time()
 
-        bitonic_sort = bitonic_sort_test(times[i], max_number[i])
-        brick_sort = brick_sort_test(times[i], max_number[i])
-        bubble_sort = bubble_sort_test(times[i], max_number[i])
-        bucket_sort = bucket_sort_test(times[i], max_number[i])
-        cocktail_sort = cocktail_sort_test(times[i], max_number[i])
-        comb_sort = comb_sort_test(times[i], max_number[i])
-        gnome_sort = gnome_sort_test(times[i], max_number[i])
-        heap_sort = heap_sort_test(times[i], max_number[i])
-        insertion_sort = insertion_sort_test(times[i], max_number[i])
-        merge_sort = merge_sort_test(times[i], max_number[i])
-        pancake_sort = merge_sort_test(times[i], max_number[i])
-        pigeonhole_sort = pancake_sort_test(times[i], max_number[i])
-        quick_sort = quick_sort_test(times[i], max_number[i])
-        radix_sort = radix_sort_test(times[i], max_number[i])
-        selection_sort = selection_sort_test(times[i], max_number[i])
-        shell_sort = shell_sort_test(times[i], max_number[i])
-        smooth_sort = smooth_sort_test(times[i], max_number[i])
-        strand_sort = strand_sort_test(times[i], max_number[i])
+    total_time = str(round(end - start, 3))
 
-        print('Bitonic sort: {}s'.format(bitonic_sort))
-        print('Brick Sort: {}s'.format(brick_sort))
-        print('Bubble Sort: {}s'.format(bubble_sort))
-        print('Bucket Sort: {}s'.format(bucket_sort))
-        print('Cocktail Sort: {}s'.format(cocktail_sort))
-        print('Comb Sort: {}s'.format(comb_sort))
-        print('Gnome Sort: {}s'.format(gnome_sort))
-        print('Heap Sort: {}s'.format(heap_sort))
-        print('Insertion Sort: {}s'.format(insertion_sort))
-        print('Merge Sort: {}s'.format(merge_sort))
-        print('Pancake Sort: {}s'.format(pancake_sort))
-        print('Pigeonhole Sort: {}s'.format(pigeonhole_sort))
-        print('Quick Sort: {}s'.format(quick_sort))
-        print('Radix Sort: {}s'.format(radix_sort))
-        print('Selection Sort: {}s'.format(selection_sort))
-        print('Shell Sort: {}s'.format(shell_sort))
-        print('Smooth Sort: {}s'.format(smooth_sort))
-        print('Strand Sort: {}s'.format(strand_sort))
+    print('Bitonic sort: {}'.format(bitonic_sort))
+    print('Brick Sort: {}'.format(brick_sort))
+    print('Bubble Sort: {}'.format(bubble_sort))
+    print('Bucket Sort: {}'.format(bucket_sort))
+    print('Cocktail Sort: {}'.format(cocktail_sort))
+    print('Comb Sort: {}'.format(comb_sort))
+    print('Gnome Sort: {}'.format(gnome_sort))
+    print('Heap Sort: {}'.format(heap_sort))
+    print('Insertion Sort: {}'.format(insertion_sort))
+    print('Merge Sort: {}'.format(merge_sort))
+    print('Pancake Sort: {}'.format(pancake_sort))
+    print('Pigeonhole Sort: {}'.format(pigeonhole_sort))
+    print('Quick Sort: {}'.format(quick_sort))
+    print('Radix Sort: {}'.format(radix_sort))
+    print('Selection Sort: {}'.format(selection_sort))
+    print('Shell Sort: {}'.format(shell_sort))
+    print('Smooth Sort: {}'.format(smooth_sort))
+    print('Strand Sort: {}'.format(strand_sort))
+    print("Total time: {}".format(total_time))
 
-        time_variable.append(bitonic_sort)
-        time_variable.append(brick_sort)
-        time_variable.append(bubble_sort)
-        time_variable.append(bucket_sort)
-        time_variable.append(cocktail_sort)
-        time_variable.append(comb_sort)
-        time_variable.append(gnome_sort)
-        time_variable.append(heap_sort)
-        time_variable.append(insertion_sort)
-        time_variable.append(merge_sort)
-        time_variable.append(pancake_sort)
-        time_variable.append(pigeonhole_sort)
-        time_variable.append(quick_sort)
-        time_variable.append(radix_sort)
-        time_variable.append(selection_sort)
-        time_variable.append(shell_sort)
-        time_variable.append(smooth_sort)
-        time_variable.append(strand_sort)
+    tests['Bitonic sort'] = bitonic_sort
+    tests['Brick Sort'] = brick_sort
+    tests['Bubble Sort'] = bubble_sort
+    tests['Bucket Sort'] = bucket_sort
+    tests['Cocktail Sort'] = cocktail_sort
+    tests['Comb Sort'] = comb_sort
+    tests['Gnome Sort'] = gnome_sort
+    tests['Heap Sort'] = heap_sort
+    tests['Insertion Sort'] = insertion_sort
+    tests['Merge Sort'] = merge_sort
+    tests['Pancake Sort'] = pancake_sort
+    tests['Pigeonhole Sort'] = pigeonhole_sort
+    tests['Quick Sort'] = quick_sort
+    tests['Radix Sort'] = radix_sort
+    tests['Selection Sort'] = selection_sort
+    tests['Shell Sort'] = shell_sort
+    tests['Smooth Sort'] = smooth_sort
+    tests['Strand Sort'] = strand_sort
 
-        tests[f"Test with {times[i]} times and max number {max_number[i]}"] = time_variable
-    
-    return tests
+    print(tests)
+    return tests, total_time
 
 if __name__ == "__main__":
     main()

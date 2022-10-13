@@ -50,7 +50,7 @@ def heap_sort_test():
 
     for i in range(len(len_num)):
         list = []
-        for i in range(len_num[i]):
+        for j in range(len_num[i]):
             list.append(random.randint(0, max_number[i]))
 
         start = time.time()
