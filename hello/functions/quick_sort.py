@@ -38,6 +38,7 @@ def quick_sort_algorithm(arr, esq, dir):
 def quick_sort(arr):
     return quick_sort_algorithm(arr, 0, len(arr) - 1)
 
+# Small: 550000, Medium: 1250000, Large: 2500000
 def quick_sort_test(len_num, max_number):
     list = []
     for i in range(len_num):

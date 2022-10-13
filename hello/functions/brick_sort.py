@@ -19,6 +19,7 @@ def brick_sort(sort_arr):
       
     return arr
 
+# Small: 600, Medium: 800, Large: 1000
 def brick_sort_test(len_num, max_number):
     list = []
     for i in range(len_num):

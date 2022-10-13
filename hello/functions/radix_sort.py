@@ -42,6 +42,7 @@ def radix_sort(sort_arr):
     
     return array
 
+# Small: 450000, Medium: 980000, Large: 1500000
 def radix_sort_test(len_num, max_number):
     list = []
     for i in range(len_num):

@@ -15,6 +15,7 @@ def gnome_sort(arr):
 
     return arr
 
+# Small: 4000, Medium: 6500, Large: 9000
 def gnome_sort_test(len_num, max_number):
     list = []
     for i in range(len_num):

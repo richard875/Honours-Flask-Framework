@@ -42,6 +42,7 @@ def heap_sort(sort_list):
 
     return arr
 
+# Small: 200000, Medium: 500000, Large: 900000
 def heap_sort_test(len_num, max_number):
     list = []
     for i in range(len_num):

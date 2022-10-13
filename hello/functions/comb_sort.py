@@ -16,6 +16,7 @@ def comb_sort(sort_arr):
                 
     return num
 
+# Small: 250000, Medium: 550000, Large: 850000
 def comb_sort_test(len_num, max_number):
     list = []
     for i in range(len_num):

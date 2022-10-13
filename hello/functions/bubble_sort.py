@@ -21,6 +21,7 @@ def bubble_sort(arr):
 
     return sort_list
 
+# Small: 5000, Medium: 7000, Large: 10000
 def bubble_sort_test(len_num, max_number):
     list = []
     for i in range(len_num):

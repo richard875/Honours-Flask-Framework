@@ -22,6 +22,7 @@ def insertion_sort(arr):
 
     return sort_list
 
+# Small: 6000, Medium: 10000, Large: 14000
 def insertion_sort_test(len_num, max_number):
     list = []
     for i in range(len_num):

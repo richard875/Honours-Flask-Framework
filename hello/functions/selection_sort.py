@@ -24,6 +24,7 @@ def selection_sort(sort_arr):
     
     return arr
 
+# Small: 6000, Medium: 9500, Large: 14000
 def selection_sort_test(len_num, max_number):
     list = []
     for i in range(len_num):

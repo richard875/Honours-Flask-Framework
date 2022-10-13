@@ -43,6 +43,7 @@ def merge_sort(arr):
 
     return obj
 
+# Small: 300000, Medium: 700000, Large: 1400000
 def merge_sort_test(len_num, max_number):
     list = []
     for i in range(len_num):

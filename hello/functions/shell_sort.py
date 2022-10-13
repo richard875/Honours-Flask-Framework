@@ -24,6 +24,7 @@ def shell_sort(sort_arr):
     
     return array
 
+# Small: 190000, Medium: 400000, Large: 700000
 def shell_sort_test(len_num, max_number):
     list = []
     for i in range(len_num):

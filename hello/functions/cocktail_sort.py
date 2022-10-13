@@ -43,6 +43,7 @@ def cocktail_sort(sort_arr):
         
         return a
 
+# Small: 4000000, Medium: 10000000, Large: 17000000
 def cocktail_sort_test(len_num, max_number):
     list = []
     for i in range(len_num):

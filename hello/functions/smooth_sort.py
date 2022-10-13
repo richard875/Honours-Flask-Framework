@@ -151,6 +151,7 @@ def smooth_sort(sort_arr):
     
     return A
 
+# Small: 85000, Medium: 200000, Large: 400000
 def smooth_sort_test(len_num, max_number):
     list = []
     for i in range(len_num):

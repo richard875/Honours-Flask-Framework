@@ -19,6 +19,7 @@ def pigeonhole_sort(items):
     
     return items
 
+# Small: 4000000, Medium: 11000000, Large: 11000000
 def pigeonhole_sort_test(len_num, max_number):
     list = []
     for i in range(len_num):

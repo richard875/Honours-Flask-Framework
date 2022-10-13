@@ -38,6 +38,7 @@ def bucket_sort(input_list):
         final_output = final_output + buckets_list[x]
     return final_output
 
+# Small: 35000, Medium: 55000, Large: 70000
 def bucket_sort_test(len_num, max_number):
     list = []
     for i in range(len_num):
