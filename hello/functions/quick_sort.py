@@ -39,18 +39,25 @@ def quick_sort(arr):
     return quick_sort_algorithm(arr, 0, len(arr) - 1)
 
 # Small: 550000, Medium: 1250000, Large: 2500000
-def quick_sort_test(len_num, max_number):
-    list = []
-    for i in range(len_num):
-        list.append(random.randint(0, max_number))
+def quick_sort_test():
+    time_variable = []
+    len_num = [550000, 1250000, 2500000]
+    max_number = [550000, 1250000, 2500000]
 
-    start = time.time()
-    # -------------- Function start --------------
-    result = quick_sort(list)
-    # -------------- Function stop --------------
-    end = time.time()
+    for i in range(len(len_num)):
+        list = []
+        for i in range(len_num[i]):
+            list.append(random.randint(0, max_number[i]))
 
-    return str(round(end - start, 3))
+        start = time.time()
+        # -------------- Function start --------------
+        result = quick_sort(list)
+        # -------------- Function stop --------------
+        end = time.time()
+
+        time_variable.append(str(round(end - start, 3)))
+
+    return time_variable
 
 
 if __name__ == "__main__":

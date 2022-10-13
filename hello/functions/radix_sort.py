@@ -43,18 +43,25 @@ def radix_sort(sort_arr):
     return array
 
 # Small: 450000, Medium: 980000, Large: 1500000
-def radix_sort_test(len_num, max_number):
-    list = []
-    for i in range(len_num):
-        list.append(random.randint(0, max_number))
+def radix_sort_test():
+    time_variable = []
+    len_num = [450000, 980000, 1500000]
+    max_number = [450000, 980000, 1500000]
 
-    start = time.time()
-    # -------------- Function start --------------
-    result = radix_sort(list)
-    # -------------- Function stop --------------
-    end = time.time()
+    for i in range(len(len_num)):
+        list = []
+        for i in range(len_num[i]):
+            list.append(random.randint(0, max_number[i]))
 
-    return str(round(end - start, 3))
+        start = time.time()
+        # -------------- Function start --------------
+        result = radix_sort(list)
+        # -------------- Function stop --------------
+        end = time.time()
+
+        time_variable.append(str(round(end - start, 3)))
+
+    return time_variable
 
 if __name__ == "__main__":
     print(radix_sort([4, 2, 3, 1]))

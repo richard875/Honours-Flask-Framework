@@ -28,18 +28,25 @@ def bitonic_sort(a):
     return bitonic_sort_algorithm(a, 0, len(a), 1)
 
 # Small: 100000, Medium: 200000, Large: 300000
-def bitonic_sort_test(len_num, max_number):
-    list = []
-    for i in range(len_num):
-        list.append(random.randint(0, max_number))
+def bitonic_sort_test():
+    time_variable = []
+    len_num = [100000, 200000, 300000]
+    max_number = [100000, 200000, 300000]
 
-    start = time.time()
-    # -------------- Function start --------------
-    result = bitonic_sort(list)
-    # -------------- Function stop --------------
-    end = time.time()
+    for i in range(len(len_num)):
+        list = []
+        for i in range(len_num[i]):
+            list.append(random.randint(0, max_number[i]))
 
-    return str(round(end - start, 3))
+        start = time.time()
+        # -------------- Function start --------------
+        result = bitonic_sort(list)
+        # -------------- Function stop --------------
+        end = time.time()
+
+        time_variable.append(str(round(end - start, 3)))
+
+    return time_variable
 
 if __name__ == "__main__":
     print(bitonic_sort([4, 2, 3, 1]))

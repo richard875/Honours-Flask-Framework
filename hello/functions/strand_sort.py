@@ -28,18 +28,26 @@ def merge(a, b):
   output += b
   return output
 
-def strand_sort_test(len_num, max_number):
-    list = []
-    for i in range(len_num):
-        list.append(random.randint(0, max_number))
+# Small: 20000, Medium: 30000, Large: 35000
+def strand_sort_test():
+    time_variable = []
+    len_num = [20000, 30000, 35000]
+    max_number = [20000, 30000, 35000]
 
-    start = time.time()
-    # -------------- Function start --------------
-    result = strand_sort(list)
-    # -------------- Function stop --------------
-    end = time.time()
+    for i in range(len(len_num)):
+      list = []
+      for i in range(len_num[i]):
+          list.append(random.randint(0, max_number[i]))
 
-    return str(round(end - start, 3))
+      start = time.time()
+      # -------------- Function start --------------
+      result = strand_sort(list)
+      # -------------- Function stop --------------
+      end = time.time()
+
+      time_variable.append(str(round(end - start, 3)))
+
+    return time_variable
 
 if __name__ == "__main__":
   print(strand_sort([4, 2, 3, 1]))

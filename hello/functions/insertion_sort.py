@@ -23,18 +23,25 @@ def insertion_sort(arr):
     return sort_list
 
 # Small: 6000, Medium: 10000, Large: 14000
-def insertion_sort_test(len_num, max_number):
-    list = []
-    for i in range(len_num):
-        list.append(random.randint(0, max_number))
+def insertion_sort_test():
+    time_variable = []
+    len_num = [6000, 10000, 14000]
+    max_number = [6000, 10000, 14000]
 
-    start = time.time()
-    # -------------- Function start --------------
-    result = insertion_sort(list)
-    # -------------- Function stop --------------
-    end = time.time()
+    for i in range(len(len_num)):
+        list = []
+        for i in range(len_num[i]):
+            list.append(random.randint(0, max_number[i]))
 
-    return str(round(end - start, 3))
+        start = time.time()
+        # -------------- Function start --------------
+        result = insertion_sort(list)
+        # -------------- Function stop --------------
+        end = time.time()
+
+        time_variable.append(str(round(end - start, 3)))
+
+    return time_variable
 
 if __name__ == "__main__":
     print(insertion_sort([4, 2, 3, 1]))

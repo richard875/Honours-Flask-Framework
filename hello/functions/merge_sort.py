@@ -44,18 +44,25 @@ def merge_sort(arr):
     return obj
 
 # Small: 300000, Medium: 700000, Large: 1400000
-def merge_sort_test(len_num, max_number):
-    list = []
-    for i in range(len_num):
-        list.append(random.randint(0, max_number))
+def merge_sort_test():
+    time_variable = []
+    len_num = [300000, 700000, 1400000]
+    max_number = [300000, 700000, 1400000]
 
-    start = time.time()
-    # -------------- Function start --------------
-    result = merge_sort(list)
-    # -------------- Function stop --------------
-    end = time.time()
+    for i in range(len(len_num)):
+        list = []
+        for i in range(len_num[i]):
+            list.append(random.randint(0, max_number[i]))
 
-    return str(round(end - start, 3))
+        start = time.time()
+        # -------------- Function start --------------
+        result = merge_sort(list)
+        # -------------- Function stop --------------
+        end = time.time()
+
+        time_variable.append(str(round(end - start, 3)))
+
+    return time_variable
 
 if __name__ == "__main__":
     print(merge_sort([4, 2, 3, 1]))

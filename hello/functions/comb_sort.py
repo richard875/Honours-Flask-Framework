@@ -17,18 +17,25 @@ def comb_sort(sort_arr):
     return num
 
 # Small: 250000, Medium: 550000, Large: 850000
-def comb_sort_test(len_num, max_number):
-    list = []
-    for i in range(len_num):
-        list.append(random.randint(0, max_number))
+def comb_sort_test():
+    time_variable = []
+    len_num = [250000, 550000, 850000]
+    max_number = [250000, 550000, 850000]
 
-    start = time.time()
-    # -------------- Function start --------------
-    result = comb_sort(list)
-    # -------------- Function stop --------------
-    end = time.time()
+    for i in range(len(len_num)):
+        list = []
+        for i in range(len_num[i]):
+            list.append(random.randint(0, max_number[i]))
 
-    return str(round(end - start, 3))
+        start = time.time()
+        # -------------- Function start --------------
+        result = comb_sort(list)
+        # -------------- Function stop --------------
+        end = time.time()
+
+        time_variable.append(str(round(end - start, 3)))
+
+    return time_variable
 
 if __name__ == "__main__":
     print(comb_sort([4, 2, 3, 1]))

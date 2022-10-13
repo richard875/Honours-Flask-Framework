@@ -25,18 +25,25 @@ def shell_sort(sort_arr):
     return array
 
 # Small: 190000, Medium: 400000, Large: 700000
-def shell_sort_test(len_num, max_number):
-    list = []
-    for i in range(len_num):
-        list.append(random.randint(0, max_number))
+def shell_sort_test():
+    time_variable = []
+    len_num = [190000, 400000, 700000]
+    max_number = [190000, 400000, 700000]
 
-    start = time.time()
-    # -------------- Function start --------------
-    result = shell_sort(list)
-    # -------------- Function stop --------------
-    end = time.time()
+    for i in range(len(len_num)):
+        list = []
+        for i in range(len_num[i]):
+            list.append(random.randint(0, max_number[i]))
 
-    return str(round(end - start, 3))
+        start = time.time()
+        # -------------- Function start --------------
+        result = shell_sort(list)
+        # -------------- Function stop --------------
+        end = time.time()
+
+        time_variable.append(str(round(end - start, 3)))
+
+    return time_variable
 
 if __name__ == "__main__":
     print(shell_sort([4, 2, 3, 1]))
