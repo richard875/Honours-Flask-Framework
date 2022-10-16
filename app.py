@@ -21,8 +21,6 @@ def index():
     test, total_time = main()
     template = format(test, total_time)
     return f'<div>{template}</div>'
-    # print(test)
-    # return f'<div>{test}</div>'
 
 
 # bind multiple URL for one view function
