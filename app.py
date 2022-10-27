@@ -9,14 +9,16 @@ import os
 import click
 from flask import Flask
 
-from tests import main
-from format import format
+from src.start.tests import main
+from src.start.format import format
+from src.start.tests_other import main_other
+from src.start.format_other import format_other
 
 app = Flask(__name__)
 
 
 # the minimal Flask application
-@app.route('/')
+@app.route('/sorting')
 def index():
     test, total_time = main()
     template = format(test, total_time)
@@ -24,10 +26,12 @@ def index():
 
 
 # bind multiple URL for one view function
-@app.route('/hi')
-@app.route('/hello')
-def say_hello():
-    return '<h1>Hello, Flask!</h1>'
+@app.route('/other')
+@app.route('/other-algorithms')
+def other():
+    dijkstra, floyd, kruskal, prim = main_other()
+    template = format_other(dijkstra, floyd, kruskal, prim)
+    return f'<h1>{template}</h1>'
 
 
 # dynamic route, URL variable default
