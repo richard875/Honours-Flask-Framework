@@ -2,24 +2,24 @@ import os
 import time
 import random
 
-from functions.bitonic_sort import bitonic_sort_test
-from functions.brick_sort import brick_sort_test
-from functions.bubble_sort import bubble_sort_test
-from functions.bucket_sort import bucket_sort_test
-from functions.cocktail_sort import cocktail_sort_test
-from functions.comb_sort import comb_sort_test
-from functions.gnome_sort import gnome_sort_test
-from functions.heap_sort import heap_sort_test
-from functions.insertion_sort import insertion_sort_test
-from functions.merge_sort import merge_sort_test
-from functions.pancake_sort import pancake_sort_test
-from functions.pigeonhole_sort import pigeonhole_sort_test
-from functions.quick_sort import quick_sort_test
-from functions.radix_sort import radix_sort_test
-from functions.selection_sort import selection_sort_test
-from functions.shell_sort import shell_sort_test
-from functions.smooth_sort import smooth_sort_test
-from functions.strand_sort import strand_sort_test
+from src.sorting.bitonic_sort import bitonic_sort_test
+from src.sorting.brick_sort import brick_sort_test
+from src.sorting.bubble_sort import bubble_sort_test
+from src.sorting.bucket_sort import bucket_sort_test
+from src.sorting.cocktail_sort import cocktail_sort_test
+from src.sorting.comb_sort import comb_sort_test
+from src.sorting.gnome_sort import gnome_sort_test
+from src.sorting.heap_sort import heap_sort_test
+from src.sorting.insertion_sort import insertion_sort_test
+from src.sorting.merge_sort import merge_sort_test
+from src.sorting.pancake_sort import pancake_sort_test
+from src.sorting.pigeonhole_sort import pigeonhole_sort_test
+from src.sorting.quick_sort import quick_sort_test
+from src.sorting.radix_sort import radix_sort_test
+from src.sorting.selection_sort import selection_sort_test
+from src.sorting.shell_sort import shell_sort_test
+from src.sorting.smooth_sort import smooth_sort_test
+from src.sorting.strand_sort import strand_sort_test
 
 
 def main():
@@ -69,7 +69,7 @@ def main():
     # print('Strand Sort: {}'.format(strand_sort))
     print("Total time: {}".format(total_time))
 
-    # tests['Bitonic sort'] = bitonic_sort
+    tests['Bitonic sort'] = bitonic_sort
     # tests['Brick Sort'] = brick_sort
     # tests['Bubble Sort'] = bubble_sort
     # tests['Bucket Sort'] = bucket_sort

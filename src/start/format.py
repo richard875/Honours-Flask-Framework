@@ -1,5 +1,9 @@
+from datetime import datetime
+
 def format(rest_result, total_time):
+    now = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
     string_builder = ""
+    string_builder += f"<h3>Run at: {now}</h3>"
     string_builder += "<h2>Experiment 1: Benchmark</h2>"
 
     for key in rest_result:
